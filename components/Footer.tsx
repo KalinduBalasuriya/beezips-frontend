@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,9 +7,16 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
         <div className="lg:col-span-1">
           <div className="flex items-center gap-2 mb-4">
-            <span className="hex bg-honey w-8 h-8 flex items-center justify-center text-ink font-display font-900 text-sm">
-              B
+            <span className="relative w-9 h-9 flex items-center justify-center transition-transform group-hover:rotate-45">
+              <Image
+                src="/logo.png"
+                alt="Beezips logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </span>
+
             <span className="font-display text-xl font-700 text-cream">
               Beezips
             </span>
@@ -46,9 +54,9 @@ export default function Footer() {
             Get in touch
           </h4>
           <ul className="space-y-2 text-sm text-cream/50">
-            <li>hello@beezips.com</li>
-            <li>+94 77 123 4567</li>
-            <li>Negombo, Sri Lanka</li>
+            <li>info@beezips.com</li>
+            <li>+94 70 767 76734</li>
+            <li>No 236/2, Chilaw Rd, Bingiriya</li>
           </ul>
         </div>
       </div>
