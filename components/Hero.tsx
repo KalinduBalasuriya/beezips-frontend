@@ -1,18 +1,31 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative honeycomb-bg overflow-hidden">
+    <section className="relative overflow-hidden">
+      {/* Background image */}
+      <Image
+        src="/hero-banner.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center -z-20"
+      />
+
+      {/* Darkening scrim so text stays legible over the photo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/55 to-ink/85 -z-10" />
+
       <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-28 lg:pt-28 lg:pb-36 grid lg:grid-cols-2 gap-16 items-center relative z-10">
         <div>
           <span className="inline-flex items-center gap-2 text-honey text-xs font-700 uppercase tracking-[0.2em] mb-6">
-            <span className="w-8 h-px bg-honey" />
-            Ready-to-serve fruit juice
+            <span className="w-6 h-px bg-honey" />
+            100% Natural Ready-to-serve fruit juice
           </span>
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-700 text-cream leading-[1.02] mb-6">
             Bee knows
-            <br />
-            <span className="italic text-honey">the best.</span>
+            <span className="text-honey"> the best.</span>
           </h1>
           <p className="text-cream/70 text-lg max-w-md mb-10 leading-relaxed">
             Real fruit, slow-pressed and bottled with nothing to hide behind.
@@ -33,13 +46,9 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-
-        <div className="relative flex justify-center lg:justify-end">
-          <BottleIllustration />
-        </div>
       </div>
 
-      <div className="divider-comb absolute bottom-0 left-0 right-0" />
+      {/* <div className="divider-comb absolute bottom-0 left-0 right-0 z-10" /> */}
     </section>
   );
 }
@@ -47,7 +56,7 @@ export default function Hero() {
 function BottleIllustration() {
   return (
     <div className="relative animate-float">
-      <svg
+      {/* <svg
         width="240"
         height="420"
         viewBox="0 0 240 420"
@@ -91,7 +100,13 @@ function BottleIllustration() {
         >
           PASSION FRUIT
         </text>
-        <circle cx="40" cy="120" r="3" fill="#ffce35" className="animate-drip" />
+        <circle
+          cx="40"
+          cy="120"
+          r="3"
+          fill="#ffce35"
+          className="animate-drip"
+        />
         <circle
           cx="200"
           cy="160"
@@ -108,7 +123,7 @@ function BottleIllustration() {
           className="animate-drip"
           style={{ animationDelay: "1.4s" }}
         />
-      </svg>
+      </svg> */}
     </div>
   );
 }

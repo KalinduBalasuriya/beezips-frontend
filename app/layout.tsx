@@ -16,7 +16,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Beezips — Bee Knows The Best",
+  title: "Beezips - Bee Knows The Best",
   description:
     "Beezips is a ready-to-serve fruit juice, brewed pure and natural — no artificial shortcuts, just real fruit and the patience of a hive. Islandwide delivery, distributor-friendly.",
 };

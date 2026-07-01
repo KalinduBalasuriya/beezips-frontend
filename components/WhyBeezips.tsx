@@ -36,11 +36,7 @@ export default function WhyBeezips() {
               key={r.title}
               className="bg-charcoal/60 border border-honey/15 rounded-sm p-7 hover:border-honey/50 transition-colors group"
             >
-              <div className="hex w-12 h-12 bg-honey/15 group-hover:bg-honey transition-colors flex items-center justify-center mb-6">
-                <span className="font-display font-700 text-honey group-hover:text-ink transition-colors">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
+              <HexBadge index={i} />
               <h3 className="font-display text-xl font-600 text-cream mb-3">
                 {r.title}
               </h3>
@@ -49,7 +45,25 @@ export default function WhyBeezips() {
           ))}
         </div>
       </div>
-      <div className="divider-comb" />
+      {/* <div className="divider-comb" /> */}
     </section>
+  );
+}
+
+function HexBadge({ index }: { index: number }) {
+  return (
+    <div className="relative w-14 h-12 mb-6">
+      <svg viewBox="0 0 100 86.6" className="absolute inset-0 w-full h-full">
+        <path
+          d="M35,0 L65,0 Q75,0 80,8.66 L95,34.64 Q100,43.3 95,51.96 L80,77.94 Q75,86.6 65,86.6 L35,86.6 Q25,86.6 20,77.94 L5,51.96 Q0,43.3 5,34.64 L20,8.66 Q25,0 35,0 Z"
+          className="fill-honey/15 group-hover:fill-honey transition-colors duration-300"
+        />
+      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="font-display font-700 text-honey group-hover:text-ink transition-colors duration-300">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
+    </div>
   );
 }
