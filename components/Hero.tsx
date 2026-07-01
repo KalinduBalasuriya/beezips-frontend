@@ -1,0 +1,114 @@
+import Link from "next/link";
+
+export default function Hero() {
+  return (
+    <section className="relative honeycomb-bg overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-28 lg:pt-28 lg:pb-36 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div>
+          <span className="inline-flex items-center gap-2 text-honey text-xs font-700 uppercase tracking-[0.2em] mb-6">
+            <span className="w-8 h-px bg-honey" />
+            Ready-to-serve fruit juice
+          </span>
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-700 text-cream leading-[1.02] mb-6">
+            Bee knows
+            <br />
+            <span className="italic text-honey">the best.</span>
+          </h1>
+          <p className="text-cream/70 text-lg max-w-md mb-10 leading-relaxed">
+            Real fruit, slow-pressed and bottled with nothing to hide behind.
+            Beezips is what a hive would brew, if a hive could brew juice.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/products"
+              className="bg-honey text-ink font-700 px-7 py-3.5 rounded-sm hover:bg-cream transition-colors"
+            >
+              Explore Products
+            </Link>
+            <Link
+              href="#our-story"
+              className="border border-cream/30 text-cream font-600 px-7 py-3.5 rounded-sm hover:border-honey hover:text-honey transition-colors"
+            >
+              Our Story
+            </Link>
+          </div>
+        </div>
+
+        <div className="relative flex justify-center lg:justify-end">
+          <BottleIllustration />
+        </div>
+      </div>
+
+      <div className="divider-comb absolute bottom-0 left-0 right-0" />
+    </section>
+  );
+}
+
+function BottleIllustration() {
+  return (
+    <div className="relative animate-float">
+      <svg
+        width="240"
+        height="420"
+        viewBox="0 0 240 420"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="drop-shadow-[0_30px_60px_rgba(255,206,53,0.18)]"
+      >
+        <rect x="95" y="20" width="50" height="36" rx="6" fill="#1f1c18" />
+        <rect x="88" y="50" width="64" height="20" rx="4" fill="#ffce35" />
+        <path
+          d="M70 90 C70 70, 90 70, 90 56 L150 56 C150 70, 170 70, 170 90 L182 380 C182 400, 165 410, 120 410 C75 410, 58 400, 58 380 Z"
+          fill="#fff8e6"
+          fillOpacity="0.08"
+          stroke="#ffce35"
+          strokeWidth="2"
+        />
+        <path
+          d="M62 230 L178 230 L172 380 C172 396, 158 402, 120 402 C82 402, 68 396, 68 380 Z"
+          fill="#ffce35"
+        />
+        <rect x="66" y="170" width="108" height="64" rx="2" fill="#0a0a0a" />
+        <text
+          x="120"
+          y="198"
+          textAnchor="middle"
+          fill="#ffce35"
+          fontSize="17"
+          fontFamily="var(--font-fraunces), serif"
+          fontWeight="700"
+        >
+          Beezips
+        </text>
+        <text
+          x="120"
+          y="216"
+          textAnchor="middle"
+          fill="#fff8e6"
+          fontSize="8"
+          letterSpacing="2"
+          fontFamily="var(--font-jakarta), sans-serif"
+        >
+          PASSION FRUIT
+        </text>
+        <circle cx="40" cy="120" r="3" fill="#ffce35" className="animate-drip" />
+        <circle
+          cx="200"
+          cy="160"
+          r="3"
+          fill="#ffce35"
+          className="animate-drip"
+          style={{ animationDelay: "0.8s" }}
+        />
+        <circle
+          cx="30"
+          cy="300"
+          r="3"
+          fill="#ffce35"
+          className="animate-drip"
+          style={{ animationDelay: "1.4s" }}
+        />
+      </svg>
+    </div>
+  );
+}
