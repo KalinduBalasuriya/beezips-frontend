@@ -34,7 +34,10 @@ export default function Footer() {
           links={[
             { label: "Login", href: "/login" },
             { label: "Sign Up", href: "/signup" },
-            { label: "Become a Distributor", href: "mailto:partners@beezips.com" },
+            {
+              label: "Become a Distributor",
+              href: "mailto:partners@beezips.com",
+            },
           ]}
         />
 
@@ -49,8 +52,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-
-      <div className="divider-comb opacity-60" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-cream/40">
         <span>© {new Date().getFullYear()} Beezips. All rights reserved.</span>

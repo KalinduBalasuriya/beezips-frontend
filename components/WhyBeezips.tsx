@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const reasons = [
   {
     title: "Pure, natural taste",
@@ -19,13 +21,24 @@ const reasons = [
 
 export default function WhyBeezips() {
   return (
-    <section id="why-beezips" className="honeycomb-bg relative">
+    <section id="why-beezips" className="relative">
+      <Image
+        src="/why-beezips-banner3.png"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center -z-20"
+      />
+      {/* Darkening scrim so text stays legible over the photo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/55 to-ink/85 -z-10" />
+
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-32">
         <div className="max-w-xl mb-16">
-          <span className="text-honey text-xs font-700 uppercase tracking-[0.2em] block mb-4">
+          <span className="text-honey text-md font-700 uppercase tracking-[0.2em] block mb-4">
             Why Beezips
           </span>
-          <h2 className="font-display text-4xl lg:text-5xl font-700 text-cream leading-tight">
+          <h2 className="font-display text-3xl lg:text-4xl font-700 text-cream leading-tight">
             We kept it as close to the orchard as a bottle allows.
           </h2>
         </div>

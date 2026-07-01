@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-cream/50 backdrop-blur border-b border-honey/20">
-      <nav className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-20">
+      <nav className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2 group">
           <span className="relative w-9 h-9 flex items-center justify-center transition-transform group-hover:rotate-45">
             <Image

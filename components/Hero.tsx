@@ -28,8 +28,8 @@ export default function Hero() {
             <span className="text-honey"> the best.</span>
           </h1>
           <p className="text-cream/70 text-lg max-w-md mb-10 leading-relaxed">
-            Real fruit, slow-pressed and bottled with nothing to hide behind.
-            Beezips is what a hive would brew, if a hive could brew juice.
+            Real fruit, nurtured by nature and bottled with care. Beezips brings
+            the authentic flavour of every harvest to your table.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
