@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -13,13 +14,19 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-ink/95 backdrop-blur border-b border-honey/20">
-      <nav className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-20">
+    <header className="sticky top-0 z-50 bg-cream/50 backdrop-blur border-b border-honey/20">
+      <nav className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-14">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="hex bg-honey w-9 h-9 flex items-center justify-center text-ink font-display font-900 text-sm transition-transform group-hover:rotate-12">
-            B
+          <span className="relative w-8 h-8 flex items-center justify-center transition-transform group-hover:rotate-45">
+            <Image
+              src="/logo.png"
+              alt="Beezips logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </span>
-          <span className="font-display text-2xl font-700 text-cream tracking-tight">
+          <span className="font-display text-xl font-700 text-ink tracking-tight">
             Beezips
           </span>
         </Link>
@@ -29,7 +36,7 @@ export default function Navbar() {
             <Link
               key={l.label}
               href={l.href}
-              className="text-cream/80 hover:text-honey transition-colors text-sm font-600 tracking-wide uppercase"
+              className="text-ink/80 hover:text-honey transition-colors text-sm font-600 tracking-wide"
             >
               {l.label}
             </Link>
@@ -39,13 +46,13 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             href="/login"
-            className="text-cream/90 hover:text-honey transition-colors text-sm font-600 px-4 py-2"
+            className="border border-ink rounded-sm text-ink hover:text-cream hover:bg-ink hover:border-transparent transition-colors text-sm font-600 px-5 py-1.5"
           >
             Login
           </Link>
           <Link
             href="/signup"
-            className="bg-honey text-ink text-sm font-700 px-5 py-2.5 rounded-sm hover:bg-cream transition-colors"
+            className="bg-honey hover:text-cream text-ink text-sm font-700 px-5 py-1.5 rounded-sm hover:bg-ink transition-colors"
           >
             Sign Up
           </Link>

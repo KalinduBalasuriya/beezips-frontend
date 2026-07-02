@@ -17,10 +17,10 @@ const config: Config = {
         cream: "#fff8e6",
         "cream-dim": "#f3ecd6",
       },
-      fontFamily: {
-        display: ["var(--font-fraunces)", "serif"],
-        body: ["var(--font-jakarta)", "sans-serif"],
-      },
+      // fontFamily: {
+      //   display: ["var(--font-fraunces)", "serif"],
+      //   body: ["var(--font-jakarta)", "sans-serif"],
+      // },
       backgroundImage: {
         hexgrid:
           "radial-gradient(circle at 1px 1px, rgba(255,206,53,0.18) 1px, transparent 0)",
