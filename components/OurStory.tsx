@@ -1,7 +1,10 @@
 export default function OurStory() {
   return (
-    <section id="our-story" className="bg-cream relative">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-32 grid lg:grid-cols-12 gap-12">
+    <section
+      id="our-story"
+      className="bg-cream relative in-h-[90vh] flex items-center"
+    >
+      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-24 lg:py-12 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4">
           <span className="text-honey-deep text-md font-700 uppercase tracking-[0.2em] block mb-4">
             Our Story
@@ -13,7 +16,7 @@ export default function OurStory() {
           </h2>
         </div>
 
-        <div className="lg:col-span-7 lg:col-start-6 space-y-6 text-ink/75 text-lg leading-relaxed font-display">
+        <div className="lg:col-span-7 lg:col-start-6 space-y-6 text-ink/75 text-sm leading-relaxed font-display">
           <p>
             <span className="font-bold italic">Beezips</span> didn't begin as a
             juice company. It began with a vision to grow healthy, flavourful

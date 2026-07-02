@@ -22,8 +22,8 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-cream/50 text-sm leading-relaxed">
-            Bee knows the best. Pure fruit juice, pressed in small batches and
-            delivered islandwide.
+            Real fruit, nurtured by nature and bottled with care. Beezips brings
+            the authentic flavour of every harvest to your table.
           </p>
         </div>
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
       {/* Background image */}
       <Image
         src="/hero-banner.jpg"
@@ -14,17 +14,18 @@ export default function Hero() {
         className="object-cover object-center -z-20"
       />
 
-      {/* Darkening scrim so text stays legible over the photo */}
+      {/* Darkening scrim */}
       <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/55 to-ink/85 -z-10" />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-28 lg:pt-28 lg:pb-36 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="mx-auto max-w-7xl w-full px-6 lg:px-20 py-16 grid lg:grid-cols-2 gap-16 items-center relative z-10">
         <div>
           <span className="inline-flex items-center gap-2 text-honey text-xs font-700 uppercase tracking-[0.2em] mb-6">
             <span className="w-6 h-px bg-honey" />
             100% Natural Ready-to-serve fruit juice
           </span>
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-700 text-cream leading-[1.02] mb-6">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-700 text-cream leading-[1.02] mb-6">
             Bee knows
+            <br />
             <span className="text-honey"> the best.</span>
           </h1>
           <p className="text-cream/70 text-lg max-w-md mb-10 leading-relaxed">
@@ -47,8 +48,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* <div className="divider-comb absolute bottom-0 left-0 right-0 z-10" /> */}
     </section>
   );
 }

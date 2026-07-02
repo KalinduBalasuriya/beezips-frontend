@@ -2,26 +2,26 @@ import Image from "next/image";
 
 const reasons = [
   {
-    title: "Pure, natural taste",
-    body: "No flavour concentrates and no aftertaste to mask. What you taste is the fruit we pressed that week, nothing standing in for it.",
+    title: "100% Pure, natural taste",
+    body: "Made with 100% real fruits for a naturally rich, authentic flavour. Every sip delivers the fresh taste of real fruit, exactly as nature intended.",
   },
   {
-    title: "Genuinely organic",
-    body: "Sourced from growers who skip synthetic pesticides and fertiliser, so the fruit arrives the way it grew, not the way it was treated.",
+    title: "Genuinely made with real fruits",
+    body: "Most of our fruits come straight from our own orchards, where they're harvested fresh. We never rely on purchased fruit pulps or concentrates.",
   },
   {
-    title: "Zero artificial anything",
-    body: "No added sugar, no preservatives, no artificial colouring. If an ingredient needs a chemistry degree to explain, it isn't in the bottle.",
+    title: "Naturally preserved",
+    body: "Our juices are gently pasteurized and bottled under sterile conditions to maintain freshness. No artificial flavours, colours or preservatives are ever added.",
   },
   {
-    title: "Small-batch pressed",
-    body: "We press in quantities small enough to finish and ship within days, not warehouse-large batches sitting in concentrate for months.",
+    title: "No artificial ingredients",
+    body: "Nothing artificial goes into our bottles. No added flavours, colours, preservatives, or unnecessary additives just real fruit, carefully prepared and naturally enjoyed.",
   },
 ];
 
 export default function WhyBeezips() {
   return (
-    <section id="why-beezips" className="relative">
+    <section id="why-beezips" className="relative min-[70vh] flex items-center">
       <Image
         src="/why-beezips-banner3.png"
         alt=""
@@ -33,12 +33,12 @@ export default function WhyBeezips() {
       {/* Darkening scrim so text stays legible over the photo */}
       <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/55 to-ink/85 -z-10" />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-24 lg:py-16">
         <div className="max-w-xl mb-16">
           <span className="text-honey text-md font-700 uppercase tracking-[0.2em] block mb-4">
             Why Beezips
           </span>
-          <h2 className="font-display text-3xl lg:text-4xl font-700 text-cream leading-tight">
+          <h2 className="font-display text-2xl lg:text-3xl font-700 text-cream leading-tight">
             We kept it as close to the orchard as a bottle allows.
           </h2>
         </div>
@@ -50,7 +50,7 @@ export default function WhyBeezips() {
               className="bg-charcoal/60 border border-honey/15 rounded-sm p-7 hover:border-honey/50 transition-colors group"
             >
               <HexBadge index={i} />
-              <h3 className="font-display text-xl font-600 text-cream mb-3">
+              <h3 className="font-display text-lg font-600 text-cream mb-3">
                 {r.title}
               </h3>
               <p className="text-cream/60 text-sm leading-relaxed">{r.body}</p>
