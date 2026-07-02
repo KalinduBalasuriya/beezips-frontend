@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative overflow-hidden min-h-[90vh] flex items-center">
       {/* Background image */}
       <Image
-        src="/hero-banner.jpg"
+        src="/hero-banner.JPG"
         alt=""
         fill
         priority
