@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Eye } from "lucide-react";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -123,7 +125,15 @@ export default function ProductsPage() {
       <Navbar />
 
       {/* Page header */}
-      <section className="honeycomb-bg">
+      <section className="relative overflow-hidden">
+        <Image
+          src="/honeycomb-bg.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center -z-20"
+        />
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 lg:py-20">
           <span className="inline-flex items-center gap-2 text-honey text-xs font-700 uppercase tracking-[0.2em] mb-4">
             Our Products
@@ -186,7 +196,15 @@ export default function ProductsPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="honeycomb-bg">
+      <section className="relative bg-ink/80 overflow-hidden">
+        <Image
+          src="/hero-banner.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center -z-20"
+        />
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 text-center">
           <h2 className="font-display text-3xl font-700 text-cream mb-3">
             Can&apos;t decide? Try a mix.
@@ -282,16 +300,24 @@ function ProductCard({
             </span>
             <span className="text-ink/40 text-xs">per bottle</span>
           </div>
-
-          <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full bg-honey text-ink font-700 text-sm py-3 rounded-md hover:bg-ink hover:text-cream transition-colors"
-          >
-            <WhatsAppIcon className="w-4 h-4" />
-            Order via WhatsApp
-          </a>
+          <div className="flex gap-2">
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-cream font-700 text-sm py-2 rounded-md hover:bg-ink transition-colors"
+            >
+              <WhatsAppIcon className="w-4 h-4" />
+              Order via WhatsApp
+            </a>
+            <Link
+              href={`/products/${product.id}`}
+              className="flex items-center justify-center gap-2 w-2/3 border border-ink/30 text-ink/80 font-700 text-sm py-2 rounded-md transition-colors  hover:border-ink hover:text-ink"
+            >
+              View Details
+              <Eye size={16} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
