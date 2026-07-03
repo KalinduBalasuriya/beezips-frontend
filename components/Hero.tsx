@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden min-h-[85vh] flex items-center">
       {/* Background image */}
       <Image
-        src="/hero-banner.JPG"
+        src="/why-beezips-banner4.png"
         alt=""
         fill
         priority
@@ -15,12 +15,12 @@ export default function Hero() {
       />
 
       {/* Darkening scrim */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/55 to-ink/85 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/75 to-ink/85 -z-10" />
 
-      <div className="mx-auto max-w-7xl w-full px-6 lg:px-20 py-16 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="mx-auto max-w-7xl w-full px-6 lg:px-12 py-16 grid lg:grid-cols-2 gap-16 items-center relative z-10">
         <div>
           <span className="inline-flex items-center gap-2 text-honey text-xs font-700 uppercase tracking-[0.2em] mb-6">
-            <span className="w-6 h-px bg-honey" />
+            {/* <span className="w-6 h-px bg-honey" /> */}
             100% Natural Ready-to-serve fruit juice
           </span>
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-700 text-cream leading-[1.02] mb-6">
@@ -35,13 +35,13 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/products"
-              className="bg-honey text-ink font-700 px-7 py-3.5 rounded-sm hover:bg-cream transition-colors"
+              className="bg-honey text-ink font-700 px-6 py-2 rounded-sm hover:bg-cream transition-colors text-sm"
             >
               Explore Products
             </Link>
             <Link
               href="#our-story"
-              className="border border-cream/30 text-cream font-600 px-7 py-3.5 rounded-sm hover:border-honey hover:text-honey transition-colors"
+              className="border border-cream/30 text-cream font-600 px-6 py-2 rounded-sm hover:border-honey hover:text-honey transition-colors text-sm"
             >
               Our Story
             </Link>
