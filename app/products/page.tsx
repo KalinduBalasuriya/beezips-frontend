@@ -198,7 +198,7 @@ export default function ProductsPage() {
       {/* Bottom CTA */}
       <section className="relative bg-ink/80 overflow-hidden">
         <Image
-          src="/hero-banner.jpg"
+          src="/hero-banner.JPG"
           alt=""
           fill
           priority
