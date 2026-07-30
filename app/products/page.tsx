@@ -232,7 +232,7 @@ export default function ProductsPage() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex rounded-lg items-center gap-2 bg-[#25D366] text-sm text-white font-700 px-6 py-3 hover:bg-[#1ebc5a] transition-colors"
+            className="inline-flex rounded-lg items-center gap-2 border border-cream text-sm text-cream font-700 px-6 py-3 hover:bg-[#1ebc5a] hover:border-[#25D366] transition-colors"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Chat with us on WhatsApp

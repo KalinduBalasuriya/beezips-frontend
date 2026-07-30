@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
+import { MailIcon, MailOpen } from "lucide-react";
+import { MdEmail } from "react-icons/md";
 
 // ─── Update these with your real details ─────────────────────────────────────
 const CONTACT = {
@@ -50,10 +52,10 @@ export default function ContactPage() {
 
       {/* Contact cards */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 lg:py-24 grid lg:grid-cols-2 gap-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-10 lg:py-24 grid lg:grid-cols-2 gap-6">
           {/* Left col — direct contact */}
           <div>
-            <h2 className="font-display text-2xl font-700 text-ink mb-8">
+            <h2 className="font-display text-lg sm:text-2xl font-700 text-ink mb-4">
               Reach us directly
             </h2>
             <div className="space-y-4">
@@ -69,7 +71,7 @@ export default function ContactPage() {
                 external
               />
               <ContactCard
-                icon={<EmailIcon />}
+                icon={<MdEmail size={20} />}
                 iconBg="bg-honey"
                 label="Email"
                 value={CONTACT.email}
@@ -90,7 +92,7 @@ export default function ContactPage() {
 
           {/* Right col — social media */}
           <div>
-            <h2 className="font-display text-2xl font-700 text-ink mb-8">
+            <h2 className="font-display text-lg sm:text-2xl font-700 text-ink mb-4">
               Follow us
             </h2>
             <div className="space-y-4">
@@ -129,12 +131,12 @@ export default function ContactPage() {
 
       {/* Distributor CTA */}
       <section className="bg-ink">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid lg:grid-cols-2 gap-10 items-center">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-10 grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <span className="text-honey text-xs font-700 uppercase tracking-[0.2em] block mb-3">
               For Businesses
             </span>
-            <h2 className="font-display text-3xl font-700 text-cream leading-tight mb-3">
+            <h2 className="font-display text-xl sm:text-3xl font-700 text-cream leading-tight mb-3">
               Interested in stocking Beezips?
             </h2>
             <p className="text-cream/60 text-sm leading-relaxed">
@@ -143,23 +145,24 @@ export default function ContactPage() {
               talk.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
+          <div className="flex flex-col justify-center items-center sm:flex-row gap-4 lg:justify-end">
             <a
               href="mailto:partners@beezips.com"
-              className="inline-flex items-center justify-center gap-2 bg-honey text-ink font-700 px-7 py-3.5 rounded-lg hover:bg-cream transition-colors"
+              className="inline-flex items-center w-2/3 sm:w-1/3 justify-center gap-2 border border-honey-dark text-honey font-700 text-sm leading-none px-6 py-2 sm:py-2.5 rounded-lg hover:border-cream hover:text-cream transition-colors"
             >
-              <EmailIcon dark />
-              Email us
+              <MdEmail size={18} />
+              <span>Email us</span>
             </a>
+
             <a
               href={`https://wa.me/${CONTACT.whatsapp.number}?text=${encodeURIComponent(
                 "Hi Beezips! I'm interested in becoming a distributor.",
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-lg justify-center gap-2 bg-[#25D366] text-white font-700 px-7 py-3.5 hover:bg-[#1ebc5a] transition-colors"
+              className="inline-flex  items-center w-2/3 sm:w-1/3 justify-center gap-2 border border-[#25D366] text-[#25D366] font-700 text-sm leading-none px-6 py-2 sm:py-2.5 rounded-lg hover:border-cream hover:text-cream transition-colors"
             >
-              <WhatsAppIcon />
+              <FaWhatsapp size={18} />
               WhatsApp us
             </a>
           </div>
@@ -195,7 +198,7 @@ function ContactCard({
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="flex items-center gap-5 p-5 rounded-xl border border-ink/10 bg-cream hover:border-ink hover:shadow-md transition-all group"
+      className="flex items-center gap-5 p-2 sm:p-5 rounded-xl border border-ink/10 bg-cream hover:border-ink hover:shadow-md transition-all group"
     >
       {/* Icon circle */}
       <div
@@ -206,10 +209,10 @@ function ContactCard({
 
       {/* Text */}
       <div className="flex-1 min-w-0">
-        <div className="text-xs text-ink/50 font-700 uppercase tracking-widest mb-0.5">
+        <div className="text-xs text-ink/50 font-700 uppercase tracking-widest mb-0.5 hidden sm:block">
           {label}
         </div>
-        <div className="font-700 text-ink  transition-colors truncate">
+        <div className="font-700 text-ink text-sm  transition-colors truncate">
           {value}
         </div>
         <div className="text-xs text-ink/50 mt-0.5">{sublabel}</div>
@@ -223,7 +226,7 @@ function ContactCard({
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="w-4 h-4 text-ink/30 group-hover:text-honey group-hover:translate-x-1 transition-all flex-shrink-0"
+        className="w-4 h-4 text-ink/30 group-hover:text-ink group-hover:translate-x-1 transition-all flex-shrink-0"
       >
         <path d="M5 12h14M12 5l7 7-7 7" />
       </svg>
@@ -232,31 +235,6 @@ function ContactCard({
 }
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
-
-function WhatsAppIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-    </svg>
-  );
-}
-
-function EmailIcon({ dark }: { dark?: boolean }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke={dark ? "#0a0a0a" : "currentColor"}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="w-5 h-5"
-    >
-      <rect width="20" height="16" x="2" y="4" rx="2" />
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-    </svg>
-  );
-}
 
 function WebsiteIcon() {
   return (

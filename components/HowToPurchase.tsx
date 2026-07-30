@@ -39,8 +39,8 @@ export default function HowToPurchase() {
                 title="Message us on WhatsApp"
                 body={
                   <span>
-                    Send us a message at{" "}
-                    <a
+                    Send us a message and{" "}
+                    {/* <a
                       href={`https://wa.me/${WHATSAPP_NUMBER}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -48,7 +48,7 @@ export default function HowToPurchase() {
                     >
                       <WhatsAppIcon className="w-4 h-4" />
                       {WHATSAPP_DISPLAY}
-                    </a>{" "}
+                    </a>{" "} */}
                     and let us know you&apos;d like to place an order.
                   </span>
                 }
@@ -70,7 +70,7 @@ export default function HowToPurchase() {
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Beezips!%20I'd%20like%20to%20place%20an%20order.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#25D366] text-white font-700 px-6 py-2.5 rounded-sm hover:bg-[#1ebc5a] transition-colors"
+              className="inline-flex items-center gap-3 border-2 border-[#25D366] text-[#25D366] font-700 px-6 py-2.5 rounded-lg hover:text-cream hover:bg-[#1ebc5a] transition-colors"
             >
               <WhatsAppIcon className="w-5 h-5" />
               <span className="text-sm">Order via WhatsApp</span>
@@ -109,7 +109,7 @@ export default function HowToPurchase() {
               </p>
               <a
                 href="mailto:partners@beezips.com"
-                className="inline-block  text-honey border hover:border-ink border-honey font-700 text-sm px-5 py-2.5 rounded-sm hover:bg-cream hover:text-ink transition-colors"
+                className="inline-block  text-honey border hover:border-cream border-honey font-700 text-sm px-5 py-2 rounded-lg hover:bg-cream hover:text-ink transition-colors"
               >
                 Become a Distributor
               </a>
