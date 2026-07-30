@@ -18,16 +18,16 @@ export default function HowToPurchase() {
       id="how-to-purchase"
       className="bg-cream relative min-[70vh] flex items-center"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-24 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-16">
+      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-12 lg:py-16">
+        <div className="grid lg:grid-cols-2 gap-10">
           <div>
             <span className="text-honey-deep text-md font-700 uppercase tracking-[0.2em] block mb-4">
               How To Purchase
             </span>
-            <h2 className="font-display text-2xl lg:text-3xl font-700 text-ink leading-tight mb-6">
+            <h2 className="font-display text-2xl lg:text-3xl font-700 text-ink leading-tight mb-4">
               Islandwide delivery, straight to your door.
             </h2>
-            <p className="text-ink/70 text-md leading-relaxed mb-4">
+            <p className="text-ink/70 text-sm sm:text-md leading-relaxed mb-6">
               <span className="italic font-semibold">Ordering is simple!</span>{" "}
               Just drop us a message on WhatsApp and we&apos;ll take it from
               there. Here&apos;s how it works.
@@ -78,11 +78,11 @@ export default function HowToPurchase() {
           </div>
 
           <div>
-            <div className=" rounded-md p-8 lg:p-10">
+            <div className=" rounded-md py-2 lg:p-10">
               <h3 className="font-display text-xl font-600 text-ink mb-1">
                 Where we currently distribute
               </h3>
-              <p className="ink/50 text-sm mb-8">
+              <p className="ink/50 text-sm mb-8 mt-2 sm:mt-0">
                 Not on this list yet? Online delivery still reaches you,
                 islandwide.
               </p>

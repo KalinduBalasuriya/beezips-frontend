@@ -21,4 +21,4 @@ export type SizeOption = {
 };
 
 export type Size = "200ml" | "375ml";
-type Filter = "all" | Size;
+export type Filter = "all" | Size;

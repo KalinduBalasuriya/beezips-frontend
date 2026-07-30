@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-ink border-t border-honey/15">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-12 pb-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="lg:col-span-1">
           <div className="flex items-center gap-2 mb-4">
             <span className="relative w-9 h-9 flex items-center justify-center transition-transform group-hover:rotate-45">
@@ -53,7 +53,7 @@ export default function Footer() {
           <h4 className="text-cream font-700 text-sm uppercase tracking-wide mb-4">
             Get in touch
           </h4>
-          <ul className="space-y-2 text-sm text-cream/50">
+          <ul className="space-y-1 text-sm text-cream/50">
             <li>info@beezips.com</li>
             <li>+94 70 767 76734</li>
             <li>No 236/2, Chilaw Rd, Bingiriya</li>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-cream/40">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 pb-6 pt-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-cream/40">
         <span>© {new Date().getFullYear()} Beezips. All rights reserved.</span>
         <span>Pressed with patience, islandwide.</span>
       </div>
@@ -78,10 +78,10 @@ function FooterCol({
 }) {
   return (
     <div>
-      <h4 className="text-cream font-700 text-sm uppercase tracking-wide mb-4">
+      <h4 className="text-cream font-700 text-sm uppercase tracking-wide mb-2">
         {heading}
       </h4>
-      <ul className="space-y-2.5">
+      <ul className="space-y-0">
         {links.map((l) => (
           <li key={l.label}>
             <Link
