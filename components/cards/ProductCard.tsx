@@ -19,11 +19,11 @@ function ProductCard({
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="bg-cream rounded-sm border border-ink/10 overflow-hidden group hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
+    <div className="bg-cream rounded-xl border border-ink/10 overflow-hidden group hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
       {/* Placeholder image area — replace contents with <Image> once you have real photos */}
       <div
-        className="relative h-56 flex items-center justify-center overflow-hidden"
-        style={{ backgroundColor: product.bgColor }}
+        className="relative h-56 flex items-center justify-center overflow-hidden "
+        // style={{ backgroundColor: product.bgColor }}
       >
         <Image
           src={
@@ -46,53 +46,41 @@ function ProductCard({
         </div> */}
 
         {/* Size badge */}
-        <span className="absolute top-3 right-3 bg-honey text-ink text-xs font-700 px-2.5 py-1 rounded-sm">
+        <span className="absolute top-3 right-3 bg-honey text-ink text-xs font-700 px-2.5 py-1 rounded-md">
           {sizeOption.size}
         </span>
       </div>
 
       {/* Card body */}
-      <div className="p-6 flex flex-col flex-1">
+      <div className="p-6 flex flex-col flex-1 text-ink">
         <div className="flex items-start justify-between gap-3 mb-1">
-          <h3 className="font-display text-xl font-700 text-ink leading-tight">
+          <h3 className="font-display text-xl font-700 leading-tight">
             {product.flavor}
           </h3>
-          <span
-            className="text-xs font-700 uppercase tracking-wide mt-1 whitespace-nowrap"
-            style={{ color: product.accentColor }}
-          >
+          <span className="text-xs font-700 uppercase tracking-wide mt-1 whitespace-nowrap">
             {sizeOption.label}
           </span>
         </div>
 
-        <p className="text-ink/55 text-sm mb-4 leading-relaxed">
-          {product.tagline}
-        </p>
+        <p className="text-sm mb-4 leading-relaxed">{product.tagline}</p>
 
         <div className="mt-auto">
           <div className="flex items-center justify-between mb-4">
-            <span className="font-display text-2xl font-700 text-ink">
+            <span className="font-display text-2xl font-700">
               {sizeOption.price}
             </span>
-            <span className="text-ink/40 text-xs">per bottle</span>
+            <span className="text-xs">per bottle</span>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-center">
             <a
               href={`https://wa.me/${whatsAppNumber}?text=${waMessage}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-cream font-700 text-sm py-2 rounded-md hover:bg-ink transition-colors"
+              className="flex items-center justify-center gap-2 w-2/3 border border-ink/30 hover:border-ink text-ink font-700 text-sm py-2 rounded-lg hover:bg-ink hover:text-cream transition-colors"
             >
-              <WhatsAppIcon className="w-4 h-4" />
-              Order via WhatsApp
+              {/* <WhatsAppIcon className="w-4 h-4" /> */}
+              Buy now
             </a>
-            <Link
-              href={`/products/${product.id}`}
-              className="flex items-center justify-center gap-2 w-2/3 border border-ink/30 text-ink/80 font-700 text-sm py-2 rounded-md transition-colors  hover:border-ink hover:text-ink"
-            >
-              View Details
-              <Eye size={16} />
-            </Link>
           </div>
         </div>
       </div>

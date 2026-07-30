@@ -5,9 +5,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
+  { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
-  { label: "About", href: "#our-story" },
-  { label: "Contact", href: "#how-to-purchase" },
+  { label: "About", href: "about-us" },
+  { label: "Contact", href: "contact-us" },
 ];
 
 export default function Navbar() {
@@ -36,7 +37,7 @@ export default function Navbar() {
             <Link
               key={l.label}
               href={l.href}
-              className="text-ink/80 hover:text-honey transition-colors text-sm font-600 tracking-wide"
+              className="text-ink/80 hover:text-honey font-semibold transition-colors text-sm font-600 tracking-wide"
             >
               {l.label}
             </Link>

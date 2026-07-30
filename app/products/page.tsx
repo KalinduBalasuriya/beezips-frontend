@@ -156,7 +156,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Filter bar */}
-      <section className="bg-cream border-b border-ink/10 sticky top-20 z-40">
+      <section className="bg-cream border-b border-ink/10 sticky top-14 z-40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-4 flex items-center gap-3 flex-wrap">
           <span className="text-ink/50 text-xs font-700 uppercase tracking-widest mr-2">
             Filter by size
@@ -240,7 +240,6 @@ export default function ProductsPage() {
 }
 
 // ─── Placeholder SVG Icons ────────────────────────────────────────────────────
-// Replace these with real <Image> components once you have product photos
 
 function MixedFruitIcon() {
   return (

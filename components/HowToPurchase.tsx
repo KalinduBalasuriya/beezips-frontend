@@ -1,14 +1,12 @@
 import Link from "next/link";
 
 const areas = [
-  "Colombo",
-  "Gampaha",
+  "Kiribathgoda",
+  "Moratuwa",
+  "Malabe",
   "Negombo",
-  "Kandy",
-  "Galle",
+  "Chilaw",
   "Kurunegala",
-  "Jaffna",
-  "Matara",
 ];
 
 const WHATSAPP_NUMBER = "94707676734"; // replace with your real number, no + or spaces
@@ -111,7 +109,7 @@ export default function HowToPurchase() {
               </p>
               <a
                 href="mailto:partners@beezips.com"
-                className="inline-block bg-honey text-ink font-700 text-sm px-5 py-2.5 rounded-sm hover:bg-cream transition-colors"
+                className="inline-block  text-honey border hover:border-ink border-honey font-700 text-sm px-5 py-2.5 rounded-sm hover:bg-cream hover:text-ink transition-colors"
               >
                 Become a Distributor
               </a>

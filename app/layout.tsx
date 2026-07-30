@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
