@@ -9,13 +9,12 @@ import Link from "next/link";
 import { Eye } from "lucide-react";
 import ProductCard from "@/components/cards/ProductCard";
 import WhatsAppIcon from "@/components/custom-icons/WhatsappIcon";
-import { Product, Size } from "@/types/products";
+import { Filter, Product, Size } from "@/types/products";
+import ProductsFilter from "@/components/products-filter";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const WHATSAPP_NUMBER = "94707676734";
-
-type Filter = "all" | Size;
 
 const products: Product[] = [
   {
@@ -117,10 +116,12 @@ const products: Product[] = [
 export default function ProductsPage() {
   const [activeFilter, setActiveFilter] = useState<Filter>("all");
 
+  const onChangeFilter = (value: Filter) => setActiveFilter(value);
+
   const filters: { label: string; value: Filter }[] = [
     { label: "All Products", value: "all" },
-    { label: "Small - 200ml", value: "200ml" },
-    { label: "Large - 375ml", value: "375ml" },
+    { label: "Small", value: "200ml" },
+    { label: "Large", value: "375ml" },
   ];
 
   const productCount =
@@ -156,7 +157,12 @@ export default function ProductsPage() {
       </section>
 
       {/* Filter bar */}
-      <section className="bg-cream border-b border-ink/10 sticky top-14 z-40">
+      <ProductsFilter
+        productCount={productCount}
+        onFilterChange={onChangeFilter}
+        activeFilter={activeFilter}
+      />
+      {/* <section className="bg-cream border-b border-ink/10 sticky top-14 z-40">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-4 flex items-center gap-3 flex-wrap">
           <span className="text-ink/50 text-xs font-700 uppercase tracking-widest mr-2">
             Filter by size
@@ -165,7 +171,7 @@ export default function ProductsPage() {
             <button
               key={f.value}
               onClick={() => setActiveFilter(f.value)}
-              className={`px-4 py-1.5 rounded-md text-sm font-600 border transition-colors ${
+              className={`px-4 py-1 rounded-md text-xs sm:text-md font-600 border transition-colors ${
                 activeFilter === f.value
                   ? "bg-honey text-ink border-none"
                   : "bg-transparent text-ink/70 border-ink/20 hover:border-ink/50"
@@ -174,11 +180,11 @@ export default function ProductsPage() {
               {f.label}
             </button>
           ))}
-          <span className="ml-auto text-ink/40 text-sm">
+          <span className="ml-auto text-ink/40 text-sm hidden sm:block">
             {productCount} products
           </span>
         </div>
-      </section>
+      </section> */}
 
       {/* Products grid */}
       <section className="bg-cream-dim">
@@ -226,7 +232,7 @@ export default function ProductsPage() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#25D366] text-white font-700 px-7 py-3.5 rounded-sm hover:bg-[#1ebc5a] transition-colors"
+            className="inline-flex rounded-lg items-center gap-2 border border-cream text-sm text-cream font-700 px-6 py-3 hover:bg-[#1ebc5a] hover:border-[#25D366] transition-colors"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Chat with us on WhatsApp

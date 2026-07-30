@@ -18,16 +18,16 @@ export default function HowToPurchase() {
       id="how-to-purchase"
       className="bg-cream relative min-[70vh] flex items-center"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-24 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-16">
+      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-12 lg:py-16">
+        <div className="grid lg:grid-cols-2 gap-10">
           <div>
             <span className="text-honey-deep text-md font-700 uppercase tracking-[0.2em] block mb-4">
               How To Purchase
             </span>
-            <h2 className="font-display text-2xl lg:text-3xl font-700 text-ink leading-tight mb-6">
+            <h2 className="font-display text-2xl lg:text-3xl font-700 text-ink leading-tight mb-4">
               Islandwide delivery, straight to your door.
             </h2>
-            <p className="text-ink/70 text-md leading-relaxed mb-4">
+            <p className="text-ink/70 text-sm sm:text-md leading-relaxed mb-6">
               <span className="italic font-semibold">Ordering is simple!</span>{" "}
               Just drop us a message on WhatsApp and we&apos;ll take it from
               there. Here&apos;s how it works.
@@ -39,8 +39,8 @@ export default function HowToPurchase() {
                 title="Message us on WhatsApp"
                 body={
                   <span>
-                    Send us a message at{" "}
-                    <a
+                    Send us a message and{" "}
+                    {/* <a
                       href={`https://wa.me/${WHATSAPP_NUMBER}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -48,7 +48,7 @@ export default function HowToPurchase() {
                     >
                       <WhatsAppIcon className="w-4 h-4" />
                       {WHATSAPP_DISPLAY}
-                    </a>{" "}
+                    </a>{" "} */}
                     and let us know you&apos;d like to place an order.
                   </span>
                 }
@@ -70,7 +70,7 @@ export default function HowToPurchase() {
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Beezips!%20I'd%20like%20to%20place%20an%20order.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#25D366] text-white font-700 px-6 py-2.5 rounded-sm hover:bg-[#1ebc5a] transition-colors"
+              className="inline-flex items-center gap-3 border-2 border-[#25D366] text-[#25D366] font-700 px-6 py-2.5 rounded-lg hover:text-cream hover:bg-[#1ebc5a] transition-colors"
             >
               <WhatsAppIcon className="w-5 h-5" />
               <span className="text-sm">Order via WhatsApp</span>
@@ -78,11 +78,11 @@ export default function HowToPurchase() {
           </div>
 
           <div>
-            <div className=" rounded-md p-8 lg:p-10">
+            <div className=" rounded-md py-2 lg:p-10">
               <h3 className="font-display text-xl font-600 text-ink mb-1">
                 Where we currently distribute
               </h3>
-              <p className="ink/50 text-sm mb-8">
+              <p className="ink/50 text-sm mb-8 mt-2 sm:mt-0">
                 Not on this list yet? Online delivery still reaches you,
                 islandwide.
               </p>
@@ -109,7 +109,7 @@ export default function HowToPurchase() {
               </p>
               <a
                 href="mailto:partners@beezips.com"
-                className="inline-block  text-honey border hover:border-ink border-honey font-700 text-sm px-5 py-2.5 rounded-sm hover:bg-cream hover:text-ink transition-colors"
+                className="inline-block  text-honey border hover:border-cream border-honey font-700 text-sm px-5 py-2 rounded-lg hover:bg-cream hover:text-ink transition-colors"
               >
                 Become a Distributor
               </a>

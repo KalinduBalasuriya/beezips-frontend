@@ -4,7 +4,7 @@ export default function OurStory() {
       id="our-story"
       className="bg-cream relative in-h-[90vh] flex items-center"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-24 lg:py-12 grid lg:grid-cols-12 gap-12">
+      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-10 lg:py-12 grid lg:grid-cols-12 gap-6">
         <div className="lg:col-span-4">
           <span className="text-honey-deep text-md font-700 uppercase tracking-[0.2em] block mb-4">
             Our Story
@@ -44,10 +44,10 @@ export default function OurStory() {
             taste of real fruit.
           </p>
 
-          <div className="flex flex-wrap gap-10 pt-6 border-t border-ink/10">
+          <div className="flex flex-wrap gap-4 sm:gap-10 pt-6 border-t border-ink/10">
             <Stat value="2021" label="First batch pressed" />
             <Stat value="100%" label="Real fruit, every bottle" />
-            <Stat value="0" label="Artificial flavouring used" />
+            <Stat value="0%" label="Artificial flavouring used" />
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ export default function OurStory() {
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
-      <div className="font-display text-3xl font-700 text-honey-deep">
+      <div className="font-display text-xl sm:text-3xl font-700 text-honey-deep">
         {value}
       </div>
       <div className="text-sm text-ink/60 mt-1">{label}</div>

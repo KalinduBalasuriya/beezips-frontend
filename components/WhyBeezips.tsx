@@ -21,7 +21,7 @@ const reasons = [
 
 export default function WhyBeezips() {
   return (
-    <section id="why-beezips" className="relative min-[70vh] flex items-center">
+    <section id="why-beezips" className="relative flex items-center">
       <Image
         src="/why-beezips-banner3.png"
         alt=""
@@ -30,42 +30,47 @@ export default function WhyBeezips() {
         sizes="100vw"
         className="object-cover object-center -z-20"
       />
-      {/* Darkening scrim so text stays legible over the photo */}
       <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/55 to-ink/85 -z-10" />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-24 lg:py-16">
-        <div className="max-w-xl mb-16">
-          <span className="text-honey text-md font-700 uppercase tracking-[0.2em] block mb-4">
+      <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-16 py-12 sm:py-16 lg:py-20">
+        <div className="max-w-xl mb-8 sm:mb-12 lg:mb-16">
+          <span className="text-honey text-xs sm:text-sm font-700 uppercase tracking-[0.2em] block mb-3">
             Why Beezips
           </span>
-          <h2 className="font-display text-2xl lg:text-3xl font-700 text-cream leading-tight">
+          <h2 className="font-display text-xl sm:text-2xl lg:text-3xl font-700 text-cream leading-tight">
             We kept it as close to the orchard as a bottle allows.
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
           {reasons.map((r, i) => (
             <div
               key={r.title}
-              className="bg-charcoal/60 border border-honey/15 rounded-sm p-7 hover:border-honey/50 transition-colors group"
+              className="bg-charcoal/60 border border-honey/15 rounded-sm p-4 sm:p-5 lg:p-7 hover:border-honey/50 transition-colors group"
             >
-              <HexBadge index={i} />
-              <h3 className="font-display text-lg font-600 text-cream mb-3">
+              <div className="hidden sm:block">
+                <HexBadge index={i} />
+              </div>
+              <h3 className="font-display text-base sm:text-lg font-600 text-cream mb-2 flex gap-x-2">
+                <div className="sm:hidden">
+                  <HexBadge index={i} />
+                </div>
                 {r.title}
               </h3>
-              <p className="text-cream/60 text-sm leading-relaxed">{r.body}</p>
+              <p className="text-cream/60 text-xs sm:text-sm leading-relaxed">
+                {r.body}
+              </p>
             </div>
           ))}
         </div>
       </div>
-      {/* <div className="divider-comb" /> */}
     </section>
   );
 }
 
 function HexBadge({ index }: { index: number }) {
   return (
-    <div className="relative w-14 h-12 mb-6">
+    <div className="relative w-10 h-9 sm:w-12 sm:h-10 lg:w-14 lg:h-12 mb-4 sm:mb-5 lg:mb-6">
       <svg viewBox="0 0 100 86.6" className="absolute inset-0 w-full h-full">
         <path
           d="M35,0 L65,0 Q75,0 80,8.66 L95,34.64 Q100,43.3 95,51.96 L80,77.94 Q75,86.6 65,86.6 L35,86.6 Q25,86.6 20,77.94 L5,51.96 Q0,43.3 5,34.64 L20,8.66 Q25,0 35,0 Z"
@@ -73,7 +78,7 @@ function HexBadge({ index }: { index: number }) {
         />
       </svg>
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="font-display font-700 text-honey group-hover:text-ink transition-colors duration-300">
+        <span className="font-display font-700 text-xs sm:text-sm text-honey group-hover:text-ink transition-colors duration-300">
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>
