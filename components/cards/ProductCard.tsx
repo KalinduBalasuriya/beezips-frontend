@@ -22,7 +22,7 @@ function ProductCard({
     <div className=" rounded-xl border border-ink/10 overflow-hidden group hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
       {/* Placeholder image area — replace contents with <Image> once you have real photos */}
       <div
-        className="relative h-56 flex items-center justify-center overflow-hidden "
+        className="relative h-36 sm:h-56 flex items-center justify-center overflow-hidden "
         // style={{ backgroundColor: product.bgColor }}
       >
         <Image
@@ -43,9 +43,9 @@ function ProductCard({
       </div>
 
       {/* Card body */}
-      <div className="p-6 flex flex-col flex-1 text-ink">
+      <div className="p-4 sm:p-6 flex flex-col flex-1 text-ink">
         <div className="flex items-start justify-between gap-3 mb-1">
-          <h3 className="font-display text-xl font-700 leading-tight">
+          <h3 className="font-display text-lg sm:text-xl font-700 leading-tight">
             {product.flavor}
           </h3>
           <span className="text-xs font-700 uppercase tracking-wide mt-1 whitespace-nowrap">
@@ -53,14 +53,16 @@ function ProductCard({
           </span>
         </div>
 
-        <p className="text-sm mb-4 leading-relaxed">{product.tagline}</p>
+        <p className="text-xs sm:text-sm mb-2 sm:mb-4 leading-relaxed">
+          {product.tagline}
+        </p>
 
         <div className="mt-auto">
           <div className="flex items-center justify-between mb-4">
-            <span className="font-display text-2xl font-700">
+            <span className="font-display text-lg sm:text-2xl font-700">
               {sizeOption.price}
             </span>
-            <span className="text-xs">per bottle</span>
+            {/* <span className="text-xs">per bottle</span> */}
           </div>
           <div className="flex gap-2 justify-center">
             <a
