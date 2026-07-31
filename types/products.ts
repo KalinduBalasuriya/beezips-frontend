@@ -6,7 +6,6 @@ export interface Product {
   tagline: string;
   accentColor: string;
   bgColor: string;
-  icon: ReactNode;
   sizes: SizeOption[];
   img?: {
     small: string | undefined;
