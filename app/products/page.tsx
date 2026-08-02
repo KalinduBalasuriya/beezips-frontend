@@ -28,7 +28,7 @@ const products: Product[] = [
       { size: "375ml", label: "Large", price: "Rs. 650" },
     ],
     img: {
-      small: "/products/mixed-fruit-large.png",
+      small: "/products/mixed-fruit-small.png",
       large: "/products/mixed-fruit-large.png",
     },
   },
@@ -43,7 +43,7 @@ const products: Product[] = [
       { size: "375ml", label: "Large", price: "Rs. 650" },
     ],
     img: {
-      small: "/products/passion-mango-large.png",
+      small: "/products/passion-mango-small.png",
       large: "/products/passion-mango-large.png",
     },
   },
@@ -58,7 +58,7 @@ const products: Product[] = [
       { size: "375ml", label: "Large", price: "Rs. 650" },
     ],
     img: {
-      small: "/products/tamarind-large.png",
+      small: "/products/tamarind-small.png",
       large: "/products/tamarind-large.png",
     },
   },
@@ -73,7 +73,7 @@ const products: Product[] = [
       { size: "375ml", label: "Large", price: "Rs. 650" },
     ],
     img: {
-      small: "/products/soursop-large.png",
+      small: "/products/soursop-small.png",
       large: "/products/soursop-large.png",
     },
   },
@@ -87,6 +87,10 @@ const products: Product[] = [
       { size: "200ml", label: "Small", price: "Rs. 370" },
       { size: "375ml", label: "Large", price: "Rs. 650" },
     ],
+    img: {
+      small: "/products/aloevera-small.png",
+      large: undefined,
+    },
   },
   {
     id: "woodapple",
@@ -99,7 +103,7 @@ const products: Product[] = [
       { size: "375ml", label: "Large", price: "Rs. 650" },
     ],
     img: {
-      small: "/products/woodapple-large.png",
+      small: "/products/woodapple-small.png",
       large: "/products/woodapple-large.png",
     },
   },
