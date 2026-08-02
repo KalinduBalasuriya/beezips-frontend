@@ -25,15 +25,13 @@ function ProductCard({
         className="relative h-36 sm:h-56 flex items-center justify-center overflow-hidden "
         // style={{ backgroundColor: product.bgColor }}
       >
-        <Image
+        <ProductImage
           src={
             sizeOption.size === "200ml"
               ? (product.img?.small ?? "/product-placeholder.png")
               : (product.img?.large ?? "/product-placeholder.png")
           }
           alt={product.flavor}
-          fill
-          className="object-contain"
         />
 
         {/* Size badge */}
@@ -81,5 +79,18 @@ function ProductCard({
     </div>
   );
 }
+
+const ProductImage = ({ src, alt }: { src: string; alt: string }) => {
+  const [imgSrc, setImgSrc] = useState(src ?? "/product-placeholder.png");
+  return (
+    <Image
+      src={imgSrc}
+      alt={alt}
+      fill
+      className="object-contain"
+      onError={() => setImgSrc("/product-placeholder.png")}
+    />
+  );
+};
 
 export default ProductCard;

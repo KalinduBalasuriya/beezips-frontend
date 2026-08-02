@@ -39,7 +39,7 @@ export default function ContactPage() {
             {/* <span className="w-6 h-px bg-honey" /> */}
             Contact Us
           </span>
-          <h1 className="font-display text-4xl lg:text-5xl font-700 text-cream leading-tight max-w-xl">
+          <h1 className="font-display text-4xl lg:text-5xl font-700 text-cream leading-tight max-w-3xl">
             We&apos;d love to{" "}
             <span className="italic text-honey">hear from you.</span>
           </h1>
@@ -52,7 +52,7 @@ export default function ContactPage() {
 
       {/* Contact cards */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-10 lg:py-24 grid lg:grid-cols-2 gap-6">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-10 lg:py-14 grid lg:grid-cols-2 gap-6">
           {/* Left col — direct contact */}
           <div>
             <h2 className="font-display text-lg sm:text-2xl font-700 text-ink mb-4">
