@@ -4,6 +4,7 @@ import OurStory from "@/components/OurStory";
 import WhyBeezips from "@/components/WhyBeezips";
 import HowToPurchase from "@/components/HowToPurchase";
 import Footer from "@/components/Footer";
+import WhatsAppIcon from "@/components/custom-icons/WhatsappIcon";
 
 export default function Home() {
   return (
