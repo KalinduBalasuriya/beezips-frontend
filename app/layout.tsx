@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/global-components/WhatsappButton";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${jakarta.variable}`}>
       <body className="font-body text-ink antialiased">{children}</body>
+      <WhatsAppButton />
     </html>
   );
 }
