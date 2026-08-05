@@ -30,8 +30,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${jakarta.variable}`}>
-      <body className="font-body text-ink antialiased">{children}</body>
-      <WhatsAppButton />
+      <body className="font-body text-ink antialiased">
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
